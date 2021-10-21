@@ -6,12 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+
+    <style>
+            header {
+        background-color: #127e1a;
+        padding: 10px 15px;
+        }
+        header nav .navbar-nav .nav-link {
+            color: #efefef !important;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0px 18px !important;
+        }
+        header .navbar-brand {
+            max-width: 200px;
+        }
+
+
+        /* Header Search Bar */
+        .header-search input[type="text"] {
+            border: none;
+        }
+        .header-search .input-group-addon button {
+            color: #fff;
+            background: #ef2d2c;
+            padding: 10px 15px;
+            border: none;
+            font-size: 12px;
+        }
+        .select-style {
+            width: auto;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .select-style select {
+            width: 100%;
+            background: #efefef;
+            color: #000;
+            height: 38px;
+            padding: 0px 9px;
+            border: none;
+            outline: none;
+        }
+        .select-style select option.topshow {
+            padding: 10px 0;
+            position: relative;
+            top: 15px;
+        }
+        /* End Header Search Bar */
+
+
+        /* Header cart CSS */
+        header .cart a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header .cart {
+            position: relative;
+            left: -15px;
+        }
+        header .cart a span.number {
+            position: relative;
+            left: 38px;
+            top: -4px;
+            color: #ef2d2c;
+        }
+        header .cart a span.number {
+            position: relative;
+            left: 38px;
+            top: -4px;
+            color: #ffffff;
+        }
+        header .cart a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* End Header cart CSS */
+
+
+        /* choose store checkbox CSS */
+        header [type="radio"]:checked + label,
+        header [type="radio"]:not(:checked) + label {
+            position: relative;
+            padding-left: 5px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #fff;
+            font-family: "Conv_VisueltPro-Regular";
+            font-size: 14px;
+        }
+
+
+        /* Responsive CSS */
+        @media (max-width: 991px) {
+            header .cart a img {
+                width: 30px;
+                margin-left: 10px;
+            }
+            header .cart a span.number {
+                left: 40px;
+                top: -7px;
+                font-size: 14px;
+            }
+            header {
+                padding: 10px 0px;
+            }
+            .cart-login {
+                position: absolute;
+                right: 70px;
+            }
+            header .navbar-brand {
+                max-width: 150px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
 
     <title> </title>
   </head>
   <body>
- 
+
+    <!--NAVBAR-->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <nav class="navbar navbar-expand-xl navbar-light">
+                        <div class="container-fluid">
+                            <a href="#" class="navbar-brand"><img src="/images/markuptag-white-logo.png" alt="logo" class="img-fluid" /></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Orto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Giardino</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Animali</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Agricoltura</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+           
+
+    <!--CAROUSEL-->
+
+
+
+
+    <!--CARD-->
+    
+            
 
 
 
