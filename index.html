@@ -133,185 +133,144 @@
 
 
 
-
-
-
-
-
-
-
         :root {
-	--card-height: 40vw;
-	--card-margin: 4vw;
-	--card-top-offset: em;
-	--numcards: 4;
-	--outline-width: 0px;
+    --red: hsl(58, 78%, 62%);
+    --cyan: hsl(107, 84%, 29%);
+    --orange: hsl(154, 90%, 30%);
+    --blue: hsl(212, 36%, 43%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
 }
 
-#cards {
-	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
 }
 
-#card_1 {
-	--index: 1;
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
 
-#card_2 {
-	--index: 2;
+h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+
 }
 
-#card_3 {
-	--index: 3;
+h1:last-of-type {
+    color: var(--varyDarkBlue);
 }
 
-#card_4 {
-	--index: 4;
-}
-
-.card {
-	position: sticky;
-	top: 0;
-	padding-top: calc(var(--index) * var(--card-top-offset));
-}
-
-@supports (animation-timeline: works) {
-
-	@scroll-timeline cards-element-scrolls-in-body {
-		source: selector(body);
-		scroll-offsets:
-			/* Start when the start edge touches the top of the scrollport */
-			selector(#cards) start 1,
-			/* End when the start edge touches the start of the scrollport */
-			selector(#cards) start 0
-		;
-		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
-		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
-		time-range: 4s;
-	}
-
-	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-	}
-	
-	.card__content {
-		transform-origin: 50% 0%;
-		will-change: transform;
-
-		--duration: calc(var(--reverse-index0) * 1s);
-		--delay: calc(var(--index0) * 1s);
-
-		animation: var(--duration) linear scale var(--delay) forwards;
-		animation-timeline: cards-element-scrolls-in-body;
-	}
-
-	@keyframes scale {
-		to {
-			transform:
-				scale(calc(
-					1.1
-					-
-					calc(0.1 * var(--reverse-index))
-				));
-		}
-	}
-}
-
-
-        #debug {
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    }
-    #debug::after {
-    content: " Show Debug";
-    margin-left: 1.5em;
-    color: white;
-    white-space: nowrap;
-    }
-
-    #debug:checked ~ main {
-    --outline-width: 1px;
-    }
-
-        #cards {
-	list-style: none;
-	outline: calc(var(--outline-width) * 10) solid blue;
-	
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--numcards), var(--card-height));
-	gap: var(--card-margin);
-    }
-
-    .card {
-        outline: var(--outline-width) solid hotpink;
-    }
-
-    .card__content {
-        box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-        background: rgb(255, 255, 255);
-        color: rgb(10, 5, 7);
-        border-radius: 1em;
-        overflow: hidden;
-
-        display: grid;
-        grid-template-areas: "text img";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-
-        align-items: stretch;
-        outline: var(--outline-width) solid lime;
-    }
-
-    .card__content > div {
-        grid-area: text;
-        width: 80%;
-        place-self: center;
-        text-align: left;
-
-        display: grid;
-        gap: 1em;
-        place-items: start;
-    }
-
-    .card__content > figure {
-        grid-area: img;
-        overflow: hidden;
-    }
-
-    .card__content > figure > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
+@media (max-width: 400px) {
     h1 {
-        font-weight: 300;
-        font-size: 3.5em;
+        font-size: 1.5rem;
     }
+}
 
-    h2 {
-        font-weight: 300;
-        font-size: 2.5em;
-    }
+.header {
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
 
-    p {
-        font-family: sans-serif;
-        font-weight: 300;
-        line-height: 1.42;
-    }
+.header p {
+    margin: 0 auto;
+    line-height: 2;
+    color: var(--grayishBlue);
+}
 
-    .btn {
-        background: rgb(188 87 36);
-        color: rgb(255 255 255);
-        text-decoration: none;
-        display: inline-block;
-        padding: 0.5em;
-        border-radius: 0.25em;
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+}
+
+img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
     }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }
+    .header p {
+        width: 30%;
+    }
+    
+}
+
+
+
+
+
+
+  
+
+
+
 
  
         
@@ -335,7 +294,7 @@
                 <div class="col-lg-20 col-md-20">
                     <nav class="navbar navbar-expand-xl navbar-light">
                         <div class="container-fluid">
-                            <a href="#" class="navbar-brand"><img src="/images/markuptag-white-logo.png" alt="logo" class="img-fluid" /></a>
+                            <a href="#" class="navbar-brand"><img src="logoimages/AGROPLUSLOGO1.png" alt="logo" class="img-fluid" /></a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -401,68 +360,106 @@
         </div>
     </div>
 
-    <br>
-
-
-    <!--CARD-->
-    <ul id="cards">
-		<li class="card" id="card_1">
-			<div class="card__content">
-				<div>
-					<h2>Card One</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					<p><a href="#top" class="btn btn--accent">Read more</a></p>
-				</div>
-				<figure>
-					<img src="image caorusel/agricoltura.jpg" alt="Image description">
-				</figure>
-			</div>
-		</li>
-		<li class="card" id="card_2">
-			<div class="card__content">
-				<div>
-					<h2>Card Two</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					<p><a href="#top" class="btn btn--accent">Read more</a></p>
-				</div>
-				<figure>
-					<img src="image caorusel/giardinaggio.jpeg" alt="Image description">
-				</figure>
-			</div>
-		</li>
-		<li class="card" id="card_3">
-			<div class="card__content">
-				<div>
-					<h2>Card Three</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					<p><a href="#top" class="btn btn--accent">Read more</a></p>
-				</div>
-				<figure>
-					<img src="image caorusel/orto.jpg" alt="Image description">
-				</figure>
-			</div>
-		</li>
-		<li class="card" id="card_4">
-			<div class="card__content">
-				<div>
-					<h2>Card Four</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					<p><a href="#top" class="btn btn--accent">Read more</a></p>
-				</div>
-				<figure>
-					<img src="image caorusel/animali.jpg" alt="Image description">
-				</figure>
-			</div>
-		</li>
-	</ul>
-</main>
   
 
 
+    <!--CARD-->
+    <div class="header">
+        
+        
+      </div>
+      <div class="row1-container">
+        <div class="box box-down cyan">
+          <h2>Agricoltura</h2>
+          <p>Esplora i nostri attrezzi piu comodi</p>
+          <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+        </div>
+    
+        <div class="box red">
+          <h2>Animali</h2>
+          <p>Ammira gli animali che alleviamo con cura</p>
+          <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+        </div>
+    
+        <div class="box box-down blue">
+          <h2>Orto</h2>
+          <p>Assapora i sapori delle nostre terre</p>
+          <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+        </div>
+      </div>
+      <div class="row2-container">
+        <div class="box orange">
+          <h2>Giardino</h2>
+          <p>Esplora le costruzioni piu belle per il giardino</p>
+          <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+        </div>
+      </div>
 
 
 
 
+
+
+       <!-- Footer -->
+       <footer class="bg-white">
+        <div class="container py-5">
+          <div class="row py-4">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+              <p class="font-italic text-muted">Footer fatto da Pispis, Jerome, VedatK e Mondofufi</p>
+              <ul class="list-inline mt-4">
+                <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+              <h6 class="text-uppercase font-weight-bold mb-4"></h6>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><a href="login.html" class="text-muted">Login</a></li>
+                <li class="mb-2"><a href="register.html" class="text-muted">Registrati</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-lg-0">
+              <h6 class="text-uppercase font-weight-bold mb-4">Cose</h6>
+              <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+              <div class="p-1 rounded border">
+                <div class="input-group">
+                  <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+                  <div class="input-group-append">
+                    <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Copyrights -->
+        <div class="bg-light py-4">
+          <div class="container text-center">
+            <p class="text-muted mb-0 py-2">© 2021  </p>
+          </div>
+        </div>
+      </footer>
+      <!-- End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    
 
 
     <!-- JavaScript -->
