@@ -161,11 +161,78 @@ header {
             border-bottom: 3px solid #000000
         }
 
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
     </style>
 
-    <!--nabvar-->
+        <!--NAVBAR-->
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-20 col-md-20">
+                        <nav class="navbar navbar-expand-xl navbar-light">
+                            <div class="container-fluid">
+                                <a href="#" class="navbar-brand"><img src="GiardinoImages/AGROPLUSLOGO1.png" alt="logo" class="img-fluid" /></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav mx-auto">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/Orto/index.html">Orto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/giardino/giardinohome.html">Giardino</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/animali/animali.html">Animali</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/Agricoltura/index.html">Agricoltura</a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
 
-    <!-- testo di benvenuto-->
+    <!-- PRODOTTO -->
+
+    <div class="card">
+        <img src="GiardinoImages/Blue Bird scuotiolive a zaino ZM 610 TVTS.png" alt="Denim Jeans" style="width:100%">
+        <h1>Blue Bird scuotiolive a zaino ZM 610 TVTS</h1>
+        <p class="price">240.00€</p>
+        <p>Scuoti olive a zaino</p>
+        <p><button>AGGIUNGI AL CARRELLO</button></p>
+      </div>
 
     <!-- Footer -->
 <footer class="bg-white">
