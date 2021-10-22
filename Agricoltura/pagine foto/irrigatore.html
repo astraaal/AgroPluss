@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+
+    <style>
+            header {
+        background-color: #ffffff;
+        padding: 10px 15px;
+        }
+        header nav .navbar-nav .nav-link {
+            color: #000000 !important;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0px 18px !important;
+        }
+        header .navbar-brand {
+            max-width: 200px;
+        }
+
+
+        /* Header Search Bar */
+        .header-search input[type="text"] {
+            border: none;
+        }
+        .header-search .input-group-addon button {
+            color: rgb(255, 255, 255);
+            background: #ef2d2c;
+            padding: 10px 15px;
+            border: none;
+            font-size: 12px;
+        }
+        .select-style {
+            width: auto;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .select-style select {
+            width: 100%;
+            background: #ffffff;
+            color: rgb(255, 255, 255);
+            height: 38px;
+            padding: 0px 9px;
+            border: none;
+            outline: none;
+        }
+        .select-style select option.topshow {
+            padding: 10px 0;
+            position: relative;
+            top: 15px;
+        }
+        /* End Header Search Bar */
+
+
+        /* Header cart CSS */
+        header .cart a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        header .cart {
+            position: relative;
+            left: -15px;
+        }
+        header .cart a span.number {
+            position: relative;
+            left: 38px;
+            top: -4px;
+            color: #ef2d2c;
+        }
+        header .cart a span.number {
+            position: relative;
+            left: 38px;
+            top: -4px;
+            color: #ffffff;
+        }
+        header .cart a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* End Header cart CSS */
+
+
+        /* choose store checkbox CSS */
+        header [type="radio"]:checked + label,
+        header [type="radio"]:not(:checked) + label {
+            position: relative;
+            padding-left: 5px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #fff;
+            font-family: "Conv_VisueltPro-Regular";
+            font-size: 14px;
+        }
+
+        /* Responsive CSS */
+        @media (max-width: 991px) {
+            header .cart a img {
+                width: 30px;
+                margin-left: 10px;
+            }
+            header .cart a span.number {
+                left: 40px;
+                top: -7px;
+                font-size: 14px;
+            }
+            header {
+                padding: 10px 0px;
+            }
+            .cart-login {
+                position: absolute;
+                right: 70px;
+            }
+            header .navbar-brand {
+                max-width: 150px;
+            }
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif
+        }
+
+        body {
+            background-color: rgb(255, 255, 255)
+        }
+
+        .container {
+            margin: 30px auto
+        }
+
+        .navbar-nav .nav-link {
+            color: #000 !important;
+            padding: 0.5rem 0rem !important;
+            border-color: transparent;
+            margin-left: 1.5rem;
+            transition: none
+        }
+
+        .navbar .navbar-toggler:focus {
+            box-shadow: none
+        }
+
+        .navbar-nav .nav-link.active,
+        .border-red {
+            border-bottom: 3px solid #000000
+        }
+
+        .navbar-nav .nav-link:hover {
+            border-bottom: 3px solid #000000
+        }
+
+        .cards-list {
+      z-index: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+        }
+
+      .card {
+      margin: 30px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 40px;
+      box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+      cursor: pointer;
+      transition: 0.4s;
+        }
+
+      .card .card_image {
+      width: inherit;
+      height: inherit;
+      border-radius: 40px;
+        }
+
+      .card .card_image img {
+      width: inherit;
+      height: inherit;
+      border-radius: 40px;
+      object-fit: cover;
+        }
+
+      .card .card_title {
+      text-align: center;
+      border-radius: 0px 0px 40px 40px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: -80px;
+      height: 40px;
+      }
+
+      .card:hover {
+        transform: scale(0.9, 0.9);
+        box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+          -5px -5px 30px 15px rgba(0,0,0,0.22);
+      }
+
+      .title-white {
+        color: white;
+      }
+
+      .title-black {
+        color: black;
+      }
+      .wrapper {
+      background: linear-gradient(60deg, #420285, #08BDBD);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      }
+    </style>
+
+    <title> </title>
+  </head>
+  <body>
+
+    <!--NAVBAR-->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-20 col-md-20">
+                    <nav class="navbar navbar-expand-xl navbar-light">
+                        <div class="container-fluid">
+                          <a href="#" class="navbar-brand"><img src="/AgroPluss/logoimages/AGROPLUSLOGO1.png" alt="logo" class="img-fluid" /></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav mx-auto">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                  <li class="nav-item">
+                                   <a class="nav-link" href="/AgroPluss/orto/index.html">Orto</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/AgroPluss/giardino/index.html">Giardino</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/AgroPluss/animali/animali.html">Animali</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/AgroPluss/Agricoltura/index.html">Agricoltura</a>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+           
+                    <br>
+
+        <!--CAROUSEL-->
+        <div class="container-fluid">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="/AgroPluss/Agricoltura/images/fotoo1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Assaporate i sapori della nostra terra</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/AgroPluss/Agricoltura/images/fotoo2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Tutto biologicamente testato</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/AgroPluss/Agricoltura/images/fotoo3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Ortaggi di alta qualità</h5>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+    <br>
+
+
+    <!--CARD-->
+    <div class="card" style="width: 18rem;">
+        <img src="/AgroPluss/Agricoltura/images/irrigatore.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">irrigatore 1728,83€</h5>
+          <p class="card-text"> Le pompe con moltiplicatore rappresentano un sistema semplice ed affidabile per l'aspirazione e il pompaggio di liquidi.
+           Il trattore, attraverso il giunto cardanico, trasmette il moto alla girante, consentendo aspirazione e pompaggio fino a 7 metri di dislivello.           
+            Inoltre, grazie alle dimensioni ridotte, sono facilmente posizionabili su attacchi a tre punti, che ne facilitano il trasporto.</p>
+          <a href="#" class="btn btn-primary">Ordina Ora!</a>
+        </div>
+      </div>
+  
+
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
