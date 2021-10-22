@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title></title>
+
+    <style>
+
+header {
+        background-color: #ffffff;
+        padding: 10px 15px;
+        }
+        header nav .navbar-nav .nav-link {
+            color: #000000 !important;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0px 18px !important;
+        }
+        header .navbar-brand {
+            max-width: 200px;
+        }
+
+
+        /* Header Search Bar */
+        .header-search input[type="text"] {
+            border: none;
+        }
+        .header-search .input-group-addon button {
+            color: rgb(255, 255, 255);
+            background: #ef2d2c;
+            padding: 10px 15px;
+            border: none;
+            font-size: 12px;
+        }
+        .select-style {
+            width: auto;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .select-style select {
+            width: 100%;
+            background: #ffffff;
+            color: rgb(255, 255, 255);
+            height: 38px;
+            padding: 0px 9px;
+            border: none;
+            outline: none;
+        }
+        .select-style select option.topshow {
+            padding: 10px 0;
+            position: relative;
+            top: 15px;
+        }
+        /* End Header Search Bar */
+
+
+        /* Header cart CSS */
+        header .cart a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        header .cart {
+            position: relative;
+            left: -15px;
+        }
+        header .cart a span.number {
+            position: relative;
+            left: 38px;
+            top: -4px;
+            color: #ef2d2c;
+        }
+        header .cart a span.number {
+            position: relative;
+            left: 38px;
+            top: -4px;
+            color: #ffffff;
+        }
+        header .cart a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* End Header cart CSS */
+
+
+        /* choose store checkbox CSS */
+        header [type="radio"]:checked + label,
+        header [type="radio"]:not(:checked) + label {
+            position: relative;
+            padding-left: 5px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #fff;
+            font-family: "Conv_VisueltPro-Regular";
+            font-size: 14px;
+        }
+
+        /* Responsive CSS */
+        @media (max-width: 991px) {
+            header .cart a img {
+                width: 30px;
+                margin-left: 10px;
+            }
+            header .cart a span.number {
+                left: 40px;
+                top: -7px;
+                font-size: 14px;
+            }
+            header {
+                padding: 10px 0px;
+            }
+            .cart-login {
+                position: absolute;
+                right: 70px;
+            }
+            header .navbar-brand {
+                max-width: 150px;
+            }
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif
+        }
+
+        body {
+            background-color: rgb(255, 255, 255)
+        }
+
+        .container {
+            margin: 30px auto
+        }
+
+        .navbar-nav .nav-link {
+            color: #000 !important;
+            padding: 0.5rem 0rem !important;
+            border-color: transparent;
+            margin-left: 1.5rem;
+            transition: none
+        }
+
+        .navbar .navbar-toggler:focus {
+            box-shadow: none
+        }
+
+        .navbar-nav .nav-link.active,
+        .border-red {
+            border-bottom: 3px solid #000000
+        }
+
+        .navbar-nav .nav-link:hover {
+            border-bottom: 3px solid #000000
+        }
+
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+    </style>
+
+        <!--NAVBAR-->
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-20 col-md-20">
+                        <nav class="navbar navbar-expand-xl navbar-light">
+                            <div class="container-fluid">
+                                <a href="#" class="navbar-brand"><img src="GiardinoImages/AGROPLUSLOGO1.png" alt="logo" class="img-fluid" /></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav mx-auto">
+                                      <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/Orto/index.html">Orto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/giardino/giardinohome.html">Giardino</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/animali/animali.html">Animali</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/Agricoltura/index.html">Agricoltura</a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+    <!-- PRODOTTO -->
+
+    <div class="card">
+        <img src="GiardinoImages/Blue Bird scuotiolive a zaino ZM 610 TVTS.png" alt="Denim Jeans" style="width:100%">
+        <h1>Blue Bird scuotiolive a zaino ZM 610 TVTS</h1>
+        <p class="price">240.00€</p>
+        <p>Scuoti olive a zaino</p>
+        <p><button>AGGIUNGI AL CARRELLO</button></p>
+      </div>
+
+    <!-- Footer -->
+<footer class="bg-white">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+          <p class="font-italic text-muted">Footer fatto da Pispis, Jerome, VedatK e Mondofufi</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4"></h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="login.html" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="register.html" class="text-muted">Registrati</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Cose</h6>
+          <p class="text-muted mb-4">Tutti hanno diritto di manifestare liberamente il proprio pensiero con la parola, lo scritto e ogni altro mezzo di diffusione. La stampa non può essere soggetta ad autorizzazioni o censure. ... La legge può stabilire, con norme di carattere generale, che siano resi noti i mezzi di finanziamento della stampa periodica.</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2021  </p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>
